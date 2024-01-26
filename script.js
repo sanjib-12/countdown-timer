@@ -3,7 +3,10 @@ const hoursEl = document.getElementById('hours');
 const minsEl = document.getElementById('mins');
 const secondsEl = document.getElementById('seconds');
 
- const newYears = "1 jan 2024";
+const year = new Date()
+
+const nextYears = year.getFullYear() + 1;
+ const newYears = `1 jan ${nextYears}`;
 
 function countDown(){
      const newYearsDate = new Date(newYears);
@@ -29,3 +32,4 @@ function countDown(){
  
 countDown();
 setInterval(countDown, 1000);
+console.log(newYears)
